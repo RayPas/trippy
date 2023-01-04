@@ -1,4 +1,5 @@
-import RangePicker from "./components/Calendar/index";
+import RangePicker from '../Calendar/index'
+
 
 function Description() {
   return (
