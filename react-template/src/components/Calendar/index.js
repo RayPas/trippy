@@ -2,27 +2,24 @@ import React from "react";
 import "./styles.css";
 import { DateRangePicker } from "rsuite";
 
-class RangePicker extends React.Component {
-  state = {
-    selectedDates: null,
+const RangePicker = (values) => {
+  const [selectedDates, setSelectedDates] = React.useState(null);
+
+  const handleDateChange = (dates) => {
+    setSelectedDates(dates);
+    console.log(dates);
   };
 
-  handleDateChange = (dates) => {
-    this.setState({ selectedDates: dates });
-  };
+  return (
+    <div>
+      <DateRangePicker
+        appearance="default"
+        placeholder="Pick your dates"
+        style={{ width: 230 }}
+        onChange={handleDateChange}
+      />
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div>
-        <DateRangePicker
-          appearance="default"
-          placeholder="Pick your dates"
-          style={{ width: 230 }}
-          onChange={this.handleDateChange}
-        />
-      </div>
-    );
-  }
-}
-
-export default RangePicker
+export default RangePicker;
