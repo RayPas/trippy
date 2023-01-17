@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Description from "./components/Description/index";
+import ActivityTraker from "./components/Activity Tracker";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Header />
       <h1>Welcome to Trippy!</h1>
       <Description />
+      <ActivityTraker />
     </div>
   );
 }
