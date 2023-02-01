@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const Scheduler = () => {
+const Scheduler = (activities, selectedDates) => {
   const [data, setData] = useState(Array(49).fill(Array(8).fill("")));
+  console.log(activities, selectedDates);
 
   const handleCellChange = (e, rowIndex, colIndex) => {
     //Creates an array of all of the data change

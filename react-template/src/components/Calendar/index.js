@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { DateRangePicker } from "rsuite";
+import ActivityTracker from "../Activity Tracker";
 
 const RangePicker = (values) => {
   const [selectedDates, setSelectedDates] = React.useState(null);
@@ -18,6 +19,7 @@ const RangePicker = (values) => {
         style={{ width: 230 }}
         onChange={handleDateChange}
       />
+      <ActivityTracker selectedDates={selectedDates} />
     </div>
   );
 };

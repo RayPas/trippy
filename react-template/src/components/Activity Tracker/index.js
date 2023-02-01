@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Scheduler from "../Scheduler/index";
 
-const ActivityTracker = () => {
+const ActivityTracker = (selectedDates) => {
   const [inputValue, setInputValue] = useState("");
   const [activites, setActivites] = useState([]);
-
+  console.log(selectedDates);
   const handleSubmit = (event) => {
     event.preventDefault();
     // Store the inputValue
@@ -12,6 +13,7 @@ const ActivityTracker = () => {
     // console.log(activites)
     // Clear the input field
     setInputValue("");
+    // console.log(activites);
   };
 
   return (
@@ -35,6 +37,7 @@ const ActivityTracker = () => {
           </ul>
         </table>
       </div>
+      <Scheduler activites={activites} selectedDates={selectedDates} />
     </div>
   );
 };
